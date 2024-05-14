@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.text.PlainDocument;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
