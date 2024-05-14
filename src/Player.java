@@ -1,34 +1,29 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class Player {
-    int jogada;
-    public Player(int jogada) {
-        this.jogada = jogada;
+    String name;
+
+    public Player(String name) {
+        this.name = name;
     }
 
-    public int get_jogada() {
-        return jogada;
+    public String getName() {
+        return name;
     }
-    public String verifica_jogada(int jogada2) {
-        String result = "Vitória";
-        if (jogada != jogada2) {
-            switch (jogada){
-                case 0:
-                    if(jogada2 == 1){
-                        result = "Derrota";
-                        return result;
-                    } return result;
 
-                case 1:
-                    if(jogada2 == 2){
-                        result = "Derrota";
-                        return result;
-                    } return result;
-
-                case 2:
-                    if(jogada2 == 0){
-                        result = "Derrota";
-                        return result;
-                    } return result;
-            }
-        } return "Empate";
+    public int escolhe_jogada() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Escolha pedra(0), papel(1) ou tesoura(2)");
+        int escolha_pl = input.nextInt();
+        return escolha_pl;
     }
+
+    public int jogada_randomica() {
+        Random random = new Random();
+        int escolha_pl = random.nextInt(3) + 1;
+        System.out.println(escolha_pl);
+        return escolha_pl;
+    }
+    
 }
