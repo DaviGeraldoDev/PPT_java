@@ -26,7 +26,6 @@ public class Player {
     public void jogada_randomica() {
         Random random = new Random();
         this.jogada = random.nextInt(3) + 1;
-        System.out.println(jogada);
     }
     
 }
