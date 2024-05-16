@@ -10,11 +10,10 @@ public class Main {
         Player p2 = new Player("CPU");
         Verificador verificador = new Verificador();
 
-        int jogadap1 = p1.escolhe_jogada();
-        int jogadap2 = p2.jogada_randomica();
+        p1.escolhe_jogada();
+        p2.jogada_randomica();
 
-        int resultado = verificador.resultado_jogada(jogadap1, jogadap2);
-        String vencedor = verificador.resultado_jogo(p1, p2, resultado);
+        String vencedor = verificador.resultado_jogo(p1, p2);
 
         System.out.println(vencedor);
     }

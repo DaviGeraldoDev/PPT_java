@@ -1,11 +1,9 @@
 public class Verificador {
-    public int resultado_jogada(int jogada1, int jogada2) {
-        int resultado = jogada1 - jogada2;
-        return resultado;
-    }
-
-    public String resultado_jogo(Player p1, Player p2, int result) {
+    public String resultado_jogo(Player p1, Player p2) {
         String winnerRound;
+        System.out.println(p1.getJogada());
+        System.out.println(p2.getJogada());
+        int result = p1.getJogada() - p2.getJogada();
 
         if(result == 0) {
           winnerRound = "Ninguém (Empate)";
